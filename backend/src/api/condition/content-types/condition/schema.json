@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conditions",
+  "info": {
+    "singularName": "condition",
+    "pluralName": "conditions",
+    "displayName": "condition",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "conditions"
+    },
+    "info": {
+      "type": "richtext"
+    },
+    "symptoms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::symptom.symptom"
+    }
+  }
+}

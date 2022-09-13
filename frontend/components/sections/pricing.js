@@ -34,9 +34,10 @@ const Pricing = ({ data }) => {
               {plan.description}
             </p>
             <p className="text-3xl mt-4">
-              {plan.price === 0 ? "Free " : `$${plan.price} `}
+              {plan.price === 0 ? "Free " : `K${plan.price} `}
               <span className="text-base font-medium">{plan.pricePeriod}</span>
             </p>
+             <p className="text-xl mt-4">Tests for:</p>
             <ul className="mt-4 flex flex-col gap-3">
               {plan.features.map((feature) => (
                 <li

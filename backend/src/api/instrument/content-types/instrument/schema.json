@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "instruments",
+  "info": {
+    "singularName": "instrument",
+    "pluralName": "instruments",
+    "displayName": "instrument"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "info": {
+      "type": "richtext"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "commissioned": {
+      "type": "datetime"
+    },
+    "decommissioned": {
+      "type": "datetime"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

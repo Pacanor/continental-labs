@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reagents",
+  "info": {
+    "singularName": "reagent",
+    "pluralName": "reagents",
+    "displayName": "reagent"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "inversedBy": "reagents"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "info": {
+      "type": "richtext"
+    },
+    "service_time": {
+      "type": "integer"
+    },
+    "processing_time": {
+      "type": "integer"
+    },
+    "sample": {
+      "type": "string"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "cost": {
+      "type": "decimal"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "conditions": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::condition.condition",
+      "inversedBy": "services"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "reagents": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::reagent.reagent",
+      "inversedBy": "services"
+    }
+  }
+}
